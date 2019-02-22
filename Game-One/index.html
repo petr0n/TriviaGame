@@ -1,14 +1,351 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Game One</title>
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-  </head>
-  <body>
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="assets/javascript/app.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Game One</title>
+	<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<style>
+		html,body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			height: 150px;
+			left: 0;
+			top: 0;
+			position: fixed;
+			width: 100%;
+		}
+		header h1 {
+			font-size: 34px;
+			float: left;
+			line-height: 2;
+			margin: 0;
+			text-align: center;
+			transition: all 0.4s ease-in;
+			width: 100%;
+		}
+		header #countdown {
+			font-size: 26px;
+	    text-align: left;
+			line-height: 2;
+	    float: right;
+			transition: all 0.4s ease-in;
+	    width: 51%;
+  	}
+		header.sticky {
+			display: flex;
+			height: 70px;
+		}
+		header.sticky h1 {
+			font-size: 34px;
+			width: 70%;
+		}
+		header.sticky #countdown {
+			font-size: 34px;
+			width: 30%;
+		}
+		.wrapper {
+			padding-top: 170px;
+		}
+		.container{
+			margin: 0 auto;
+			width: 1170px;
+		}
+
+		footer {
+			 background-color: #ccc;
+			 bottom: 0;
+			 display: flex;
+			 height: 100px;
+			 left: 0;
+			 position: fixed;
+			 width: 100%;
+		}
+		footer>div {
+			width: 30%;
+			margin: 10px;
+			border: 1px solid black;
+		}
+		.start-wrapper {
+		}
+		.start {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			height: 100vh;
+			width: 100%;
+		}
+		.start-btn {
+			background-color: blue;
+			font-size: 40px;
+			padding: 20px 60px;
+		}
+	</style>
+	</head>
+	<body>
+
+	<header>
+		<div class="container">
+			<h1>Welcome to Foodie Trivia!</h1>
+			<!-- countdown -->
+			<div id="countdown">
+				<span>2:00</span>
+			</div>
+		</div>
+	</header>
+
+	<div class="start-wrapper">
+		<div class="container">
+			<div class="start">
+				<button class="start-btn">Start</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper" style="display: none;">
+			<div class="container">
+
+			<!-- question 1 -->
+			<section class="question-wrapper">
+				<div class="question">
+					Who was the host of the American travel and food show No Reservations?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question1" id="question1a" type="radio" value="Danny Devito" data-a="f">
+								<span>Danny Devito</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question1" id="question1a" type="radio" value="Hulk Hogan" data-a="f">
+								<span>Hulk Hogan</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question1" id="question1a" type="radio" value="Anthony Bourdain" data-a="t">
+								<span>Anthony Bourdain</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question1" id="question1a" type="radio" value="Andrew Zimmern" data-a="f">
+								<span>Andrew Zimmern</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<!-- quesiton 2 -->
+			<section class="question-wrapper">
+				<div class="question">
+					Ice cream mixed with soda is referred to as what?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question2" id="question2a" type="radio" value="a dilly bar" data-a="f">
+								<span>A dilly bar</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question2" id="question2b" type="radio" value="a float" data-a="t">
+								<span>A float</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question2" id="question2c" type="radio" value="Rocky Road" data-a="f">
+								<span>Rocky Road</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question2" id="question2d" type="radio" value="Margarita" data-a="f">
+								<span>Margarita</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<!-- quesiton 3 -->
+			<section class="question-wrapper">
+				<div class="question">
+					What typically goes on a Margarita pizza?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question3" type="radio" value="Fresh Mozzarella, Fresh Basil & Tomato Sauce" data-a="t">
+								<span>Fresh Mozzarella, Fresh Basil & Tomato Sauce</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question3" type="radio" value="Fresh Mozzarella, Mushrooms & Sausage" data-a="f">
+								<span>Fresh Mozzarella, Mushrooms & Sausage</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question3" type="radio" value="American Cheese, Baloney & Sausage" data-a="f">
+								<span>American Cheese, Baloney & Ketchup</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question3" type="radio" value="Pepperoni, Carrots & Swiss Cheese" data-a="f">
+								<span>Pepperoni, Carrots & Swiss Cheese</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+
+		</div>
+	</div><!-- end wrapper -->
+
+		<footer>
+			<div class="missed-wrapper">
+				<h4>Missed</h4>
+				<div id="missed"></div>
+			</div>
+
+			<div class="right-wrapper">
+				<h4>Right!</h4>
+				<div id="rightAnswers"></div>
+			</div>
+
+			<div class="wrong-wrapper">
+				<h4>Wrong!</h4>
+				<div id="wrongAnswers"></div>
+			</div>
+		</footer>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="assets/javascript/app.js"></script>
+	<script>
+		$(document).ready(function($) {
+
+			const start = function(){
+				$('.start-btn').on('click', function(){
+					$('.start-wrapper').fadeOut(200, function() {
+						$('.wrapper').fadeIn(300, function() {
+							countDown();
+						});
+					});
+				});
+			}
+			start();
+			const countDown = function(){
+				let countDownId;
+				let countDownTime = 10; // seconds
+				let countDownEl = $('#countdown span');
+
+				countDownId = setInterval(count, 1000);
+
+				function count(){
+					countDownTime--;
+					countDownEl.text(timeConverter(countDownTime));
+					if (countDownTime === 0) {
+						clearInterval(countDownId);
+						scoreKeeper();
+					}
+				}
+				function timeConverter(t) {
+					var minutes = Math.floor(t / 60);
+					var seconds = t - (minutes * 60);
+					seconds = seconds < 10 ? '0' + seconds : seconds;
+					return minutes + ':' + seconds;
+				}
+			}
+
+
+			const scoreKeeper = function(){
+				let totalQuestions = $('.question-wrapper').length;
+				let rightArr = [];
+				let wrongArr = [];
+				let missed = 0;
+				for (var x = 1; x <= totalQuestions; x++) {
+					var q = $('input:radio[name="question' + x + '"]:checked');
+					if (q.length !== 0){
+						if (q.attr('data-a') === 't'){
+							rightArr.push(q.val());
+						} else {
+							wrongArr.push(q.val());
+						}
+					} else {
+						missed++;
+					}
+					$('#rightAnswers').text(rightArr.length);
+					$('#wrongAnswers').text(wrongArr.length);
+					$('#missed').text(missed);
+				}
+			}
+
+			const sticky = function(){
+				let header = $('header');
+				let top = header.offset().top + 30;
+
+				 $(window).scroll(function (event) {
+						var y = $(this).scrollTop();
+						if (y > top)
+							header.addClass('sticky');
+						else
+							header.removeClass('sticky');
+						// header.width(header.parent().width());
+					});
+			}
+			sticky();
+
+		});
+	</script>
+	</body>
 </html>
