@@ -1,18 +1,47 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+<head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Game One</title>
+	<title>Game One</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 	<style>
+	/*
+353535-3c6e71-ffffff-d9d9d9-284b63
+	*/
 		html,body {
+			font-family: Verdana, Helvetica, sans-serif;
 			margin: 0;
 			padding: 0;
 		}
+		h1, h2, h3 {
+			color: #5393a0;
+			font-family: 'Cabin', cursive;
+		}
+		.righteous {
+			font-family: 'Cabin', cursive;
+		}
+		.blue-lt {
+			color: #9bbfbf;
+		}
+		.blue {
+			color: #5393a0;
+		}
+		.whitish {
+			color: #d9d9d9;
+		}
+		.lavender {
+			color: #284b63;
+		}
+		.reddish {
+			color: #b9285f;
+		}
 		header {
+			background-color: #f3f1fe;
+			border-bottom: 2px solid #826c7d;
 			height: 150px;
 			left: 0;
 			top: 0;
@@ -20,7 +49,7 @@
 			width: 100%;
 		}
 		header h1 {
-			font-size: 34px;
+			font-size: 40px;
 			float: left;
 			line-height: 2;
 			margin: 0;
@@ -29,7 +58,7 @@
 			width: 100%;
 		}
 		header #countdown {
-			font-size: 26px;
+			font-size: 32px;
 	    text-align: left;
 			line-height: 2;
 	    float: right;
@@ -50,6 +79,7 @@
 		}
 		.wrapper {
 			padding-top: 170px;
+			margin-bottom: 200px;
 		}
 		.container{
 			margin: 0 auto;
@@ -57,7 +87,7 @@
 		}
 
 		footer {
-			 background-color: #ccc;
+			 background-color: #826c7d;
 			 bottom: 0;
 			 display: flex;
 			 height: 100px;
@@ -66,9 +96,10 @@
 			 width: 100%;
 		}
 		footer>div {
+			color: #f3f1fe;
 			width: 30%;
 			margin: 10px;
-			border: 1px solid black;
+			border: 1px solid #f3f1fe;
 		}
 		.start-wrapper {
 		}
@@ -80,20 +111,31 @@
 			width: 100%;
 		}
 		.start-btn {
-			background-color: blue;
+			background-color: #5393a0;
+			color: #f3f1fe;
 			font-size: 40px;
 			padding: 20px 60px;
+			border: 2px solid #9bbfbf;
+		}
+
+		.question-wrapper {
+			border-bottom: 2px dotted #5393a0;
+			margin-bottom: 35px;
+			padding: 0 40px 25px;
+		}
+		.answers ul {
+			list-style: none;
 		}
 	</style>
-	</head>
-	<body>
+</head>
+<body>
 
 	<header>
 		<div class="container">
 			<h1>Welcome to Foodie Trivia!</h1>
 			<!-- countdown -->
 			<div id="countdown">
-				<span>2:00</span>
+				<span class="righteous blue-lt">2:00</span>
 			</div>
 		</div>
 	</header>
@@ -101,7 +143,7 @@
 	<div class="start-wrapper">
 		<div class="container">
 			<div class="start">
-				<button class="start-btn">Start</button>
+				<button class="start-btn righteous">Start</button>
 			</div>
 		</div>
 	</div>
@@ -216,36 +258,192 @@
 				</div>
 			</section>
 
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
+
+			<!-- quesiton 4 -->
+			<section class="question-wrapper">
+				<div class="question">
+					What?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="Fresh" data-a="t">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="Fresh" data-a="f">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="American" data-a="f">
+								<span>American</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="Pepperoni" data-a="f">
+								<span>Pepperoni</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<!-- quesiton 5 -->
+			<section class="question-wrapper">
+				<div class="question">
+					What?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question5" type="radio" value="Fresh" data-a="t">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question5" type="radio" value="Fresh" data-a="f">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question5" type="radio" value="American" data-a="f">
+								<span>American</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question5" type="radio" value="Pepperoni" data-a="f">
+								<span>Pepperoni</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+
+			<!-- quesiton 6 -->
+			<section class="question-wrapper">
+				<div class="question">
+					What?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question6" type="radio" value="Fresh" data-a="t">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question6" type="radio" value="Fresh" data-a="f">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question6" type="radio" value="American" data-a="f">
+								<span>American</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question6" type="radio" value="Pepperoni" data-a="f">
+								<span>Pepperoni</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+
+			<!-- question 7 -->
+			<section class="question-wrapper">
+				<div class="question">
+					What?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question7" type="radio" value="Fresh" data-a="t">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question7" type="radio" value="Fresh" data-a="f">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question7" type="radio" value="American" data-a="f">
+								<span>American</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question7" type="radio" value="Pepperoni" data-a="f">
+								<span>Pepperoni</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+
+
+
+			<!-- quesiton 4
+			<section class="question-wrapper">
+				<div class="question">
+					What?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="Fresh" data-a="t">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="Fresh" data-a="f">
+								<span>Fresh</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="American" data-a="f">
+								<span>American</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question4" type="radio" value="Pepperoni" data-a="f">
+								<span>Pepperoni</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+			-->
+
 
 		</div>
 	</div><!-- end wrapper -->
