@@ -12,6 +12,7 @@ $(document).ready(function($) {
         });
     }
     start();
+    
     const countDown = function(){
         let countDownId;
         let countDownTime = 10; // seconds
