@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,134 +7,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
-	<style>
-	/*
-353535-3c6e71-ffffff-d9d9d9-284b63
-	*/
-		html,body {
-			font-family: Verdana, Helvetica, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		h1, h2, h3 {
-			color: #5393a0;
-			font-family: 'Cabin', cursive;
-		}
-		.righteous {
-			font-family: 'Cabin', cursive;
-		}
-		.blue-lt {
-			color: #9bbfbf;
-		}
-		.blue {
-			color: #5393a0;
-		}
-		.whitish {
-			color: #d9d9d9;
-		}
-		.lavender {
-			color: #284b63;
-		}
-		.reddish {
-			color: #b9285f;
-		}
-		header {
-			background-color: #f3f1fe;
-			border-bottom: 2px solid #826c7d;
-			height: 150px;
-			left: 0;
-			top: 0;
-			position: fixed;
-			width: 100%;
-		}
-		header h1 {
-			font-size: 40px;
-			float: left;
-			line-height: 2;
-			margin: 0;
-			text-align: center;
-			transition: all 0.4s ease-in;
-			width: 100%;
-		}
-		header #countdown {
-			font-size: 32px;
-	    text-align: left;
-			line-height: 2;
-	    float: right;
-			transition: all 0.4s ease-in;
-	    width: 51%;
-  	}
-		header.sticky {
-			display: flex;
-			height: 70px;
-		}
-		header.sticky h1 {
-			font-size: 34px;
-			width: 70%;
-		}
-		header.sticky #countdown {
-			font-size: 34px;
-			width: 30%;
-		}
-		.wrapper {
-			padding-top: 170px;
-			margin-bottom: 200px;
-		}
-		.container{
-			margin: 0 auto;
-			width: 1170px;
-		}
-
-		footer {
-			 background-color: #826c7d;
-			 bottom: 0;
-			 display: flex;
-			 height: 100px;
-			 left: 0;
-			 position: fixed;
-			 width: 100%;
-		}
-		footer>div {
-			color: #f3f1fe;
-			width: 30%;
-			margin: 10px;
-			border: 1px solid #f3f1fe;
-		}
-		.start-wrapper {
-		}
-		.start {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-			height: 100vh;
-			width: 100%;
-		}
-		.start-btn {
-			background-color: #5393a0;
-			color: #f3f1fe;
-			font-size: 40px;
-			padding: 20px 60px;
-			border: 2px solid #9bbfbf;
-		}
-
-		.question-wrapper {
-			border-bottom: 2px dotted #5393a0;
-			margin-bottom: 35px;
-			padding: 0 40px 25px;
-		}
-		.answers ul {
-			list-style: none;
-		}
-	</style>
 </head>
 <body>
 
 	<header>
 		<div class="container">
 			<h1>Welcome to Foodie Trivia!</h1>
-			<!-- countdown -->
 			<div id="countdown">
-				<span class="righteous blue-lt">2:00</span>
+				<span class="cabin-font dark-gray">2:00</span>
 			</div>
 		</div>
 	</header>
@@ -143,13 +22,13 @@
 	<div class="start-wrapper">
 		<div class="container">
 			<div class="start">
-				<button class="start-btn righteous">Start</button>
+				<button class="start-btn cabin-font">Start</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="wrapper" style="display: none;">
-			<div class="container">
+		<div class="container">
 
 			<!-- question 1 -->
 			<section class="question-wrapper">
@@ -197,13 +76,13 @@
 						<li>
 							<label>
 								<input name="question2" id="question2a" type="radio" value="a dilly bar" data-a="f">
-								<span>A dilly bar</span>
+								<span>A Dilly Bar</span>
 							</label>
 						</li>
 						<li>
 							<label>
 								<input name="question2" id="question2b" type="radio" value="a float" data-a="t">
-								<span>A float</span>
+								<span>A Float</span>
 							</label>
 						</li>
 						<li>
@@ -262,32 +141,32 @@
 			<!-- quesiton 4 -->
 			<section class="question-wrapper">
 				<div class="question">
-					What?
+					Which type of pastry is boiled before it is baked?
 				</div>
 				<div class="answers">
 					<ul>
 						<li>
 							<label>
-								<input name="question4" type="radio" value="Fresh" data-a="t">
-								<span>Fresh</span>
+								<input name="question4" type="radio" value="Crossiant" data-a="f">
+								<span>Crossiant</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question4" type="radio" value="Fresh" data-a="f">
-								<span>Fresh</span>
+								<input name="question4" type="radio" value="Bagel" data-a="t">
+								<span>Bagel</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question4" type="radio" value="American" data-a="f">
-								<span>American</span>
+								<input name="question4" type="radio" value="Danish" data-a="f">
+								<span>Danish</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question4" type="radio" value="Pepperoni" data-a="f">
-								<span>Pepperoni</span>
+								<input name="question4" type="radio" value="Bearclaw" data-a="f">
+								<span>Bearclaw</span>
 							</label>
 						</li>
 					</ul>
@@ -298,32 +177,32 @@
 			<!-- quesiton 5 -->
 			<section class="question-wrapper">
 				<div class="question">
-					What?
+					Arborio and basmati are varieties of what staple food?
 				</div>
 				<div class="answers">
 					<ul>
 						<li>
 							<label>
-								<input name="question5" type="radio" value="Fresh" data-a="t">
-								<span>Fresh</span>
+								<input name="question5" type="radio" value="Rice" data-a="t">
+								<span>Rice</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question5" type="radio" value="Fresh" data-a="f">
-								<span>Fresh</span>
+								<input name="question5" type="radio" value="Pasta" data-a="f">
+								<span>Pasta</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question5" type="radio" value="American" data-a="f">
-								<span>American</span>
+								<input name="question5" type="radio" value="Sausage" data-a="f">
+								<span>Sausage</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question5" type="radio" value="Pepperoni" data-a="f">
-								<span>Pepperoni</span>
+								<input name="question5" type="radio" value="Fruit" data-a="f">
+								<span>Fruit</span>
 							</label>
 						</li>
 					</ul>
@@ -335,32 +214,32 @@
 			<!-- quesiton 6 -->
 			<section class="question-wrapper">
 				<div class="question">
-					What?
+					Hummus is traditionally made from what variety of legume?
 				</div>
 				<div class="answers">
 					<ul>
 						<li>
 							<label>
-								<input name="question6" type="radio" value="Fresh" data-a="t">
-								<span>Fresh</span>
+								<input name="question6" type="radio" value="Green bean" data-a="f">
+								<span>Green Beans</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question6" type="radio" value="Fresh" data-a="f">
-								<span>Fresh</span>
+								<input name="question6" type="radio" value="Radishes" data-a="f">
+								<span>Radishes</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question6" type="radio" value="American" data-a="f">
-								<span>American</span>
+								<input name="question6" type="radio" value="Navy beans" data-a="f">
+								<span>Navy Beans</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question6" type="radio" value="Pepperoni" data-a="f">
-								<span>Pepperoni</span>
+								<input name="question6" type="radio" value="Chickpeas" data-a="t">
+								<span>Chickpeas</span>
 							</label>
 						</li>
 					</ul>
@@ -372,32 +251,142 @@
 			<!-- question 7 -->
 			<section class="question-wrapper">
 				<div class="question">
-					What?
+					What is the more common name nowadays for Toll House Cookies?
 				</div>
 				<div class="answers">
 					<ul>
 						<li>
 							<label>
-								<input name="question7" type="radio" value="Fresh" data-a="t">
-								<span>Fresh</span>
+								<input name="question7" type="radio" value="Snickerdoodles" data-a="f">
+								<span>Snickerdoodles</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question7" type="radio" value="Fresh" data-a="f">
-								<span>Fresh</span>
+								<input name="question7" type="radio" value="Chocolate Chip cookies" data-a="t">
+								<span>Chocolate Chip cookies</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question7" type="radio" value="American" data-a="f">
-								<span>American</span>
+								<input name="question7" type="radio" value="Gingersnaps" data-a="f">
+								<span>Gingersnaps</span>
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="question7" type="radio" value="Pepperoni" data-a="f">
-								<span>Pepperoni</span>
+								<input name="question7" type="radio" value="Oreos" data-a="f">
+								<span>Oreos</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<!-- quesiton 8 -->
+			<section class="question-wrapper">
+				<div class="question">
+					In what country would you most likely find chapati on the menu?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question8" type="radio" value="Italy" data-a="f">
+								<span>Italy</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question8" type="radio" value="Iraq" data-a="f">
+								<span>Iraq</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question8" type="radio" value="Australia" data-a="f">
+								<span>Australia</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question8" type="radio" value="India" data-a="t">
+								<span>India</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+
+			<!-- quesiton 9 -->
+			<section class="question-wrapper">
+				<div class="question">
+					Which fast food chain was behind the infamous "Where's the Beef?" ad campaign in 1984?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question9" type="radio" value="Fresh" data-a="f">
+								<span>McDonalds</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question9" type="radio" value="Fresh" data-a="f">
+								<span>Burger King</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question9" type="radio" value="American" data-a="f">
+								<span>In and Out Burger</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question9" type="radio" value="Pepperoni" data-a="t">
+								<span>Wendy's</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+
+			<!-- quesiton 10 -->
+			<section class="question-wrapper">
+				<div class="question">
+					Capsaicin is an active component found in what type of food?
+				</div>
+				<div class="answers">
+					<ul>
+						<li>
+							<label>
+								<input name="question10" type="radio" value="Twinkies" data-a="f">
+								<span>Twinkies</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question10" type="radio" value="Ramen" data-a="f">
+								<span>Ramen</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question10" type="radio" value="Spicy Peppers" data-a="t">
+								<span>Spicy Peppers</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="question10" type="radio" value="Beef Jerky" data-a="f">
+								<span>Beef Jerky</span>
 							</label>
 						</li>
 					</ul>
@@ -469,81 +458,5 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script src="assets/javascript/app.js"></script>
-	<script>
-		$(document).ready(function($) {
-
-			const start = function(){
-				$('.start-btn').on('click', function(){
-					$('.start-wrapper').fadeOut(200, function() {
-						$('.wrapper').fadeIn(300, function() {
-							countDown();
-						});
-					});
-				});
-			}
-			start();
-			const countDown = function(){
-				let countDownId;
-				let countDownTime = 10; // seconds
-				let countDownEl = $('#countdown span');
-
-				countDownId = setInterval(count, 1000);
-
-				function count(){
-					countDownTime--;
-					countDownEl.text(timeConverter(countDownTime));
-					if (countDownTime === 0) {
-						clearInterval(countDownId);
-						scoreKeeper();
-					}
-				}
-				function timeConverter(t) {
-					var minutes = Math.floor(t / 60);
-					var seconds = t - (minutes * 60);
-					seconds = seconds < 10 ? '0' + seconds : seconds;
-					return minutes + ':' + seconds;
-				}
-			}
-
-
-			const scoreKeeper = function(){
-				let totalQuestions = $('.question-wrapper').length;
-				let rightArr = [];
-				let wrongArr = [];
-				let missed = 0;
-				for (var x = 1; x <= totalQuestions; x++) {
-					var q = $('input:radio[name="question' + x + '"]:checked');
-					if (q.length !== 0){
-						if (q.attr('data-a') === 't'){
-							rightArr.push(q.val());
-						} else {
-							wrongArr.push(q.val());
-						}
-					} else {
-						missed++;
-					}
-					$('#rightAnswers').text(rightArr.length);
-					$('#wrongAnswers').text(wrongArr.length);
-					$('#missed').text(missed);
-				}
-			}
-
-			const sticky = function(){
-				let header = $('header');
-				let top = header.offset().top + 30;
-
-				 $(window).scroll(function (event) {
-						var y = $(this).scrollTop();
-						if (y > top)
-							header.addClass('sticky');
-						else
-							header.removeClass('sticky');
-						// header.width(header.parent().width());
-					});
-			}
-			sticky();
-
-		});
-	</script>
 	</body>
 </html>
