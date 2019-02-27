@@ -1,5 +1,47 @@
 /* style.css */
 
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../assets/fonts/icomoon.eot?cfjtw7');
+    src:  url('../../assets/fonts/icomoon.eot?cfjtw7#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/icomoon.ttf?cfjtw7') format('truetype'),
+        url('../../assets/fonts/icomoon.woff?cfjtw7') format('woff'),
+        url('../../assets/fonts/icomoon.svg?cfjtw7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-grin:before {
+    content: "\e9e9";
+}
+.icon-shocked:before {
+    content: "\e9f1";
+}
+.icon-confused:before {
+    content: "\e9f5";
+}
+.icon-checkmark:before {
+    content: "\ea10";
+}
+.icon-circle-right:before {
+    content: "\ea42";
+}
+
 /*
 353535-3c6e71-ffffff-d9d9d9-284b63
 */
@@ -13,7 +55,13 @@ html,body {
     font-family: Verdana, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
+body.fixed {
+    position: fixed;
+}
+
 h1, h2, h3 {
     color: var(--main-green);
     font-family: 'Cabin', cursive;
@@ -36,58 +84,75 @@ h1, h2, h3 {
 
 /* header */
 header {
-    background-color: var(--main-gray);
-    border-bottom: 2px solid var(--main-dark-gray);
+    background-position: center -400px;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 150px;
     left: 0;
     top: 0;
-    position: fixed;
+    position: absolute;
+    text-align: center;
     width: 100%;
 }
 header h1 {
-    font-size: 40px;
-    float: left;
+    color: white;
+    font-size: 2.5em;
     line-height: 2;
+    letter-spacing: 2px;
     margin: 0;
     text-align: center;
     transition: all 0.4s ease-in;
+    text-transform: uppercase;
     width: 100%;
 }
 header #countdown {
-    font-size: 32px;
-    text-align: left;
-    line-height: 2;
-    float: right;
-    transition: all 0.4s ease-in;
-    width: 51%;
+    position: absolute;
+    top: 5em;
+    transition: all 0.2s ease-in;
+    left: 47%;
 }
+.remaining {
+    color: var(--main-gray);
+    font-size: 12px;
+    font-variant: small-caps;
+    display: block;
+}
+.timer {
+    color: white;
+    font-size: 2.5em;
+}
+
 header.sticky {
-    display: flex;
-    height: 70px;
+    position: fixed;
+    height: 100px;
 }
 header.sticky h1 {
-    font-size: 34px;
+    font-size: 2em;
     width: 70%;
 }
 header.sticky #countdown {
-    font-size: 34px;
-    width: 30%;
+    top: 11px;
+    left: 65%;
 }
 
 /* header */
 .start {
-align-items: center;
-display: flex;
-justify-content: center;
-height: 100vh;
-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
 }
 .start-btn {
-    background-color: var(--main-blue);
-    color: white;
+    border: 2px solid var(--main-dark-gray);
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 0px #aaa;
+    color: var(--main-blue);
+    cursor: pointer;
+    letter-spacing: 8px;
     font-size: 40px;
     padding: 20px 60px;
-    border: 2px solid var(--main-dark-gray);
+    text-transform: uppercase;
 }
 
 /* main */
@@ -97,25 +162,7 @@ width: 100%;
 }
 .container{
     margin: 0 auto;
-    width: 1170px;
-}
-
-
-/* footer */
-footer {
-        background-color: var(--main-dark-gray);
-        bottom: 0;
-        display: flex;
-        height: 100px;
-        left: 0;
-        position: fixed;
-        width: 100%;
-}
-footer>div {
-    color: white;
-    width: 30%;
-    margin: 10px;
-    border: 1px solid white;
+    width: 768px;
 }
 
 /* questions */
@@ -123,6 +170,9 @@ footer>div {
     border-bottom: 2px dotted var(--main-blue);
     margin-bottom: 35px;
     padding: 0 40px 25px;
+}
+.question-wrapper:last-of-type {
+    border: none;
 }
 .question {
     margin-bottom: 15px;
@@ -133,47 +183,120 @@ footer>div {
 .answers ul li {
     margin-bottom: 15px;
 }
-
-
-input[type="radio"] {
-    opacity: 0;
-    position: absolute;   
-}
-
-input[type="radio"], .answers label {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 5px;
-    cursor: pointer;
-}
-
 label {
-    position: relative;
+    color: var(--main-green);
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    width: 70%;
+}
+label:hover {
+    background-color: #f8f8f8;
+    color: var(--main-blue);
+}
+input[type=radio] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    cursor: pointer;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+input[type=radio] ~ label:before {
+    border-radius: 50%;
+    border: 3px solid #D9D9D9;
+    display: inline-block;
+    color: #D9D9D9;
+    content: "\ea10";
+    font-family: 'icomoon';
+    font-size: 16px;
+    height: 25px;
+    line-height: 1.5;
+    margin-right: 7px;
+    text-align: center;
+    width: 25px;
+}
+input[type=radio]:checked ~ label:before  {
+    border-color: var(--main-blue);
+    color: var(--main-blue);
+}
+input[type=radio]:focus ~ label:before,
+input[type=radio]:focus ~ label {
+    color: var(--main-blue);
 }
 
-input[type="radio"] .answers label:before {
-    content: '';
-    background: #fff;
-    border: 2px solid #ddd;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    margin-right: 10px;
+
+/* gameover */
+.gameover {
+    background-color: var(--main-dark-gray);
+    color: white;
+    left: 25%;
+    top: -1000px;
+    padding: 40px;
+    position: absolute;
+    transition: all 0.5s ease-in;
+    width: 45%;
+    z-index: 101;
+}
+.gameover h3 {
+    color: var(--main-gray);
+    font-size: 1.6em;
     text-align: center;
 }
-
-input[type="radio"] + .answers label:before {
-    border-radius: 50%;
+.gameover > div {
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    font-size: 2.2em;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+}
+.gameover .score > i,
+.gameover .score > div {
+    display: inline;
+}
+.gameover.show {
+    top: 100px;
+}
+.gameover .try-again {
+    text-align: center;
+}
+.gameover .try-again a {
+    color: var(--main-gray);
+    text-decoration: none;
+}
+.overlay {
+    background-color: rgba(255,255,255,0.7);
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    top: 0;
+    z-index: 100;
+}
+.overlay.on {
+    width: 100vw;
+    height: 100vh;
 }
 
-input[type="radio"]:checked + .answers label:before {
-    content: "\f00c";
-    font-family: 'FontAwesome';
-    color: #bbb;
+/* footer */
+footer {
+    background-color: var(--main-dark-gray);
+    bottom: 0;
+    color: white;
+    height: 30px;
+    left: 0;
+    position: fixed;
+    width: 100%;
 }
-
-input[type="radio"]:focus + .answers label {
-    outline: 1px solid #ddd; /* focus style */
+footer p {
+    line-height: 2;
+    text-align: center;
 }

@@ -16,7 +16,7 @@ $(document).ready(function($) {
     const countDown = function(){
         let countDownId;
         let countDownTime = 10; // seconds
-        let countDownEl = $('#countdown span');
+        let countDownEl = $('#countdown span.timer');
 
         countDownId = setInterval(count, 1000);
 
@@ -26,6 +26,7 @@ $(document).ready(function($) {
             if (countDownTime === 0) {
                 clearInterval(countDownId);
                 scoreKeeper();
+                gameOver();
             }
         }
         function timeConverter(t) {
@@ -35,7 +36,6 @@ $(document).ready(function($) {
             return minutes + ':' + seconds;
         }
     }
-
 
     const scoreKeeper = function(){
         let totalQuestions = $('.question-wrapper').length;
@@ -57,6 +57,12 @@ $(document).ready(function($) {
             $('#wrongAnswers').text(wrongArr.length);
             $('#missed').text(missed);
         }
+    }
+
+    const gameOver = function(){
+        $('.gameover').addClass('show');
+        $('body').addClass('fixed');
+        $('.overlay').addClass('on');
     }
 
     const sticky = function(){
