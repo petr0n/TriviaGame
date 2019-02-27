@@ -1,15 +1,14 @@
 /* style.css */
 
-:root {
---main-dark-gray: #353535;
---main-green: #3c6e71; 
---main-gray: #d9d9d9; 
---main-blue: #284b63; 
-/* color: var(--main-txt-color); */
-}
 /*
 353535-3c6e71-ffffff-d9d9d9-284b63
 */
+:root {
+    --main-dark-gray: #353535;
+    --main-green: #3c6e71; 
+    --main-gray: #d9d9d9; 
+    --main-blue: #284b63; 
+}
 html,body {
     font-family: Verdana, Helvetica, sans-serif;
     margin: 0;

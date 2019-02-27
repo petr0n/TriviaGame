@@ -9,12 +9,13 @@ $(document).ready(function($) {
 	let isTimerRunning = false;
 
 	$('.next-btn').on('click', next);
+	$('.start-over-btn').on('click', start);
 
-	const start = function(){
+	function start(){
 		$('.start-btn').on('click', function(){
 			$('.start-wrapper').fadeOut(200, function() {
 				$('.wrapper').fadeIn(300, function() {
-					// countDown();
+					countDown();
 					questions.eq(0).fadeIn(200);
 				});
 			});
@@ -24,15 +25,15 @@ $(document).ready(function($) {
 
 
 	const countDown = function(){
-		let countDownTime = 10; // seconds
+		let countDownTime = 11; // seconds
 		let countDownEl = $('#countdown span');
 		if (!isTimerRunning) {
 			countDownId = setInterval(count, 1000);
 		}
 		function count(){
 			isTimerRunning = true;
-			countDownEl.text(timeConverter(countDownTime));
 			countDownTime--;
+			countDownEl.text(timeConverter(countDownTime));
 			if (countDownTime === 0) {
 				next();
 			}
@@ -47,9 +48,9 @@ $(document).ready(function($) {
 
 
 	function next() {
-		isTimerRunning = false;
 		clearInterval(countDownId);
 		scoreKeeper(currentQuestion);
+		isTimerRunning = false;
 		questions.eq(currentQuestion).fadeOut(300, function() {
 			if (currentQuestion === totalQuestions) { // end game
 				gameOver();
@@ -85,7 +86,7 @@ $(document).ready(function($) {
 		clearInterval(countDownId);
 		$('.finish-wrapper').animate({
 			top: 0},
-			1000, function() {
+		1000, function() {
 			$('#rightAnswers').text(rightArr.length);
 			$('#wrongAnswers').text(wrongArr.length);
 			$('#missed').text(missed);
