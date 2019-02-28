@@ -15,7 +15,7 @@ $(document).ready(function($) {
     
     const countDown = function(){
         let countDownId;
-        let countDownTime = 10; // seconds
+        let countDownTime = 120; // seconds
         let countDownEl = $('#countdown span.timer');
 
         countDownId = setInterval(count, 1000);

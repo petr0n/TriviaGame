@@ -133,6 +133,7 @@ $(document).ready(function($) {
 
 	function progressCircle(){
 		clearInterval(countDownCircleId);
+		// circle.style.animation = 'none'; 
 		let countDownCircleEl = $('.countdown-circle');
 		let countDown = 5;
 
@@ -150,7 +151,6 @@ $(document).ready(function($) {
 			}
 			console.log(countDown);
 		}, 1000);
-		// circle.style.animation = 'none'; 
 
 	}
 
