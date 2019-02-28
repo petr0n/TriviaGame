@@ -19,8 +19,9 @@
 				<span class="cabin blue-lt">0:10</span>
 			</div>
 		</div>
+		<div class="progress"><span></span></div>
 	</header>
-
+<!-- 
 	<div class="finish-wrapper">
 		<div class="finish-container">
 			<h2>Results!</h2>
@@ -39,7 +40,7 @@
 				<div id="wrongAnswers"></div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="container">
 		<div class="start-wrapper">
@@ -52,267 +53,336 @@
 	</div>
 
 	<div class="wrapper" style="display: none;">
-			<div class="container">
+		<div class="container">
 
 			<!-- question 1 -->
 			<section class="question-wrapper">
-				<div class="question">
-					Who was the host of the American travel and food show No Reservations?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question1" id="question1a" type="radio" value="Danny Devito" data-a="f">
-							<label for="question1a">Danny Devito</label>
-						</li>
-						<li>
-							<input name="question1" id="question1b" type="radio" value="Hulk Hogan" data-a="f">
-							<label for="question1b">Hulk Hogan</label>
-						</li>
-						<li>
-							<input name="question1" id="question1c" type="radio" value="Anthony Bourdain" data-a="t">
-							<label for="question1c">Anthony Bourdain</label>
-						</li>
-						<li>
-							<input name="question1" id="question1d" type="radio" value="Andrew Zimmern" data-a="f">
-							<label for="question1d">Andrew Zimmern</label>
-						</li>
-					</ul>
-				</div>
-			</section>
+					<div class="question">
+						Who was the host of the American travel and food show No Reservations?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question1" id="question1a" type="radio" value="Danny Devito" data-a="f">
+								<label for="question1a">Danny Devito</label>
+							</li>
+							<li>
+								<input name="question1" id="question1b" type="radio" value="Hulk Hogan" data-a="f">
+								<label for="question1b">Hulk Hogan</label>
+							</li>
+							<li>
+								<input name="question1" id="question1c" type="radio" value="Anthony Bourdain" data-a="t">
+								<label for="question1c">Anthony Bourdain</label>
+							</li>
+							<li>
+								<input name="question1" id="question1d" type="radio" value="Andrew Zimmern" data-a="f">
+								<label for="question1d">Andrew Zimmern</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+				<!-- quesiton 2 -->
+				<section class="question-wrapper">
+					<div class="question">
+						Ice cream mixed with soda is referred to as what?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question2" id="question2a" type="radio" value="a dilly bar" data-a="f">
+								<label for="question2a">A Dilly Bar</label>
+							</li>
+							<li>
+								<input name="question2" id="question2b" type="radio" value="a float" data-a="t">
+								<label for="question2b">A Float</label>
+							</li>
+							<li>
+								<input name="question2" id="question2c" type="radio" value="Rocky Road" data-a="f">
+								<label for="question2c">Rocky Road</label>
+							</li>
+							<li>
+								<input name="question2" id="question2d" type="radio" value="Margarita" data-a="f">
+								<label for="question2d">Margarita</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+				<!-- quesiton 3 -->
+				<section class="question-wrapper">
+					<div class="question">
+						What typically goes on a Margarita pizza?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question3" id="question3a" type="radio" value="Fresh Mozzarella, Fresh Basil & Tomato Sauce" data-a="t">
+								<label for="question3a">Fresh Mozzarella, Fresh Basil & Tomato Sauce</label>
+							</li>
+							<li>
+								<input name="question3" id="question3b" type="radio" value="Fresh Mozzarella, Mushrooms & Sausage" data-a="f">
+								<label for="question3b">Fresh Mozzarella, Mushrooms & Sausage</label>
+							</li>
+							<li>
+								<input name="question3" id="question3c" type="radio" value="American Cheese, Baloney & Sausage" data-a="f">
+								<label for="question3c">American Cheese, Baloney & Ketchup</label>
+							</li>
+							<li>
+								<input name="question3" id="question3d" type="radio" value="Pepperoni, Carrots & Swiss Cheese" data-a="f">
+								<label for="question3d">Pepperoni, Carrots & Swiss Cheese</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+				<!-- quesiton 4 -->
+				<section class="question-wrapper">
+					<div class="question">
+						Which type of pastry is boiled before it is baked?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question4" id="question4a" type="radio" value="Crossiant" data-a="f">
+								<label for="question4a">Crossiant</label>
+							</li>
+							<li>
+								<input name="question4" id="question4b" type="radio" value="Bagel" data-a="t">
+								<label for="question4b">Bagel</label>
+							</li>
+							<li>
+								<input name="question4" id="question4c" type="radio" value="Danish" data-a="f">
+								<label for="question4c">Danish</label>
+							</li>
+							<li>
+								<input name="question4" id="question4d" type="radio" value="Bearclaw" data-a="f">
+								<label for="question4d">Bearclaw</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+				<!-- quesiton 5 -->
+				<section class="question-wrapper">
+					<div class="question">
+						Arborio and basmati are varieties of what staple food?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question5" id="question5a" type="radio" value="Rice" data-a="t">
+								<label for="question5a">Rice</label>
+							</li>
+							<li>
+								<input name="question5" id="question5b" type="radio" value="Pasta" data-a="f">
+								<label for="question5b">Pasta</label>
+							</li>
+							<li>
+								<input name="question5" id="question5c" type="radio" value="Sausage" data-a="f">
+								<label for="question5c">Sausage</label>
+							</li>
+							<li>
+								<input name="question5" id="question5d" type="radio" value="Fruit" data-a="f">
+								<label for="question5d">Fruit</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+	
+				<!-- quesiton 6 -->
+				<section class="question-wrapper">
+					<div class="question">
+						Hummus is traditionally made from what variety of legume?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question6" id="question6a" type="radio" value="Green bean" data-a="f">
+								<label for="question6a">Green Beans</label>
+							</li>
+							<li>
+								<input name="question6" id="question6b" type="radio" value="Radishes" data-a="f">
+								<label for="question6b">Radishes</label>
+							</li>
+							<li>
+								<input name="question6" id="question6c" type="radio" value="Navy beans" data-a="f">
+								<label for="question6c">Navy Beans</label>
+							</li>
+							<li>
+								<input name="question6" id="question6d" type="radio" value="Chickpeas" data-a="t">
+								<label for="question6d">Chickpeas</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+	
+				<!-- question 7 -->
+				<section class="question-wrapper">
+					<div class="question">
+						What is the more common name nowadays for Toll House Cookies?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question7" id="question7a" type="radio" value="Snickerdoodles" data-a="f">
+								<label for="question7a">Snickerdoodles</label>
+							</li>
+							<li>
+								<input name="question7" id="question7b" type="radio" value="Chocolate Chip cookies" data-a="t">
+								<label for="question7b">Chocolate Chip cookies</label>
+							</li>
+							<li>
+								<input name="question7" id="question7c" type="radio" value="Gingersnaps" data-a="f">
+								<label for="question7c">Gingersnaps</label>
+							</li>
+							<li>
+								<input name="question7" id="question7d" type="radio" value="Oreos" data-a="f">
+								<label for="question7d">Oreos</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+				<!-- quesiton 8 -->
+				<section class="question-wrapper">
+					<div class="question">
+						In what country would you most likely find chapati on the menu?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question8" id="question8a" type="radio" value="Italy" data-a="f">
+								<label for="question8a">Italy</label>
+							</li>
+							<li>
+								<input name="question8" id="question8b" type="radio" value="Iraq" data-a="f">
+								<label for="question8b">Iraq</label>
+							</li>
+							<li>
+								<input name="question8" id="question8c" type="radio" value="Australia" data-a="f">
+								<label for="question8c">Australia</label>
+							</li>
+							<li>
+								<input name="question8" id="question8d" type="radio" value="India" data-a="t">
+								<label for="question8d">India</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+	
+				<!-- quesiton 9 -->
+				<section class="question-wrapper">
+					<div class="question">
+						Which fast food chain was behind the infamous "Where's the Beef?" ad campaign in 1984?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question9" id="question9a" type="radio" value="Fresh" data-a="f">
+								<label for="question9a">McDonalds</label>
+							</li>
+							<li>
+								<input name="question9" id="question9b" type="radio" value="Fresh" data-a="f">
+								<label for="question9b">Burger King</label>
+							</li>
+							<li>
+								<input name="question9" id="question9c" type="radio" value="American" data-a="f">
+								<label for="question9c">In and Out Burger</label>
+							</li>
+							<li>
+								<input name="question9" id="question9d" type="radio" value="Pepperoni" data-a="t">
+								<label for="question9d">Wendy's</label>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+	
+	
+				<!-- quesiton 10 -->
+				<section class="question-wrapper">
+					<div class="question">
+						Capsaicin is an active component found in what type of food?
+					</div>
+					<div class="answers">
+						<ul>
+							<li>
+								<input name="question10" id="question10a" type="radio" value="Twinkies" data-a="f">
+								<label for="question10a">Twinkies</label>
+							</li>
+							<li>
+								<input name="question10" id="question10b" type="radio" value="Ramen" data-a="f">
+								<label for="question10b">Ramen</label>
+							</li>
+							<li>
+								<input name="question10" id="question10c" type="radio" value="Spicy Peppers" data-a="t">
+								<label for="question10c">Spicy Peppers</label>
+							</li>
+							<li>
+								<input name="question10" id="question10d" type="radio" value="Beef Jerky" data-a="f">
+								<label for="question10d">Beef Jerky</label>
+							</li>
+						</ul>
+					</div>
+				</section>
 
-
-			<!-- quesiton 2 -->
-			<section class="question-wrapper">
-				<div class="question">
-					Ice cream mixed with soda is referred to as what?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question2" id="question2a" type="radio" value="a dilly bar" data-a="f">
-							<label for="question2a">A dilly bar</label>
-						</li>
-						<li>
-							<input name="question2" id="question2b" type="radio" value="a float" data-a="t">
-							<label for="question2b">A float</label>
-						</li>
-						<li>
-							<input name="question2" id="question2c" type="radio" value="Rocky Road" data-a="f">
-							<label for="question2c">Rocky Road</label>
-						</li>
-						<li>
-							<input name="question2" id="question2d" type="radio" value="Margarita" data-a="f">
-							<label for="question2d">Margarita</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-
-			<!-- quesiton 3 -->
-			<section class="question-wrapper">
-				<div class="question">
-					What typically goes on a Margarita pizza?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question3" id="question3a" type="radio" value="Fresh Mozzarella, Fresh Basil & Tomato Sauce" data-a="t">
-							<label for="question3a">Fresh Mozzarella, Fresh Basil & Tomato Sauce</label>
-						</li>
-						<li>
-							<input name="question3" id="question3b" type="radio" value="Fresh Mozzarella, Mushrooms & Sausage" data-a="f">
-							<label for="question3b">Fresh Mozzarella, Mushrooms & Sausage</label>
-						</li>
-						<li>
-							<input name="question3" id="question3c" type="radio" value="American Cheese, Baloney & Sausage" data-a="f">
-							<label for="question3c">American Cheese, Baloney & Ketchup</label>
-						</li>
-						<li>
-							<input name="question3" id="question4d" type="radio" value="Pepperoni, Carrots & Swiss Cheese" data-a="f">
-							<label for="question4d">Pepperoni, Carrots & Swiss Cheese</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-
-			<!-- quesiton 4 -->
-			<section class="question-wrapper">
-				<div class="question">
-					What?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question4" id="question4a" type="radio" value="Fresh" data-a="t">
-							<label for="question4a">Fresh</label>
-						</li>
-						<li>
-							<input name="question4" id="question4b" type="radio" value="Fresh" data-a="t">
-							<label for="question4b">Fresh</label>
-						</li>
-						<li>
-							<input name="question4" id="question4c" type="radio" value="Fresh" data-a="t">
-							<label for="question4c">American Fresh</label>
-						</li>
-						<li>
-							<input name="question4" id="question4d" type="radio" value="Fresh" data-a="t">
-							<label for="question4d">Pepperoni</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-
-			<!-- quesiton 5 -->
-			<section class="question-wrapper">
-				<div class="question">
-					What?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question5" id="question5a" type="radio" value="Fresh" data-a="t">
-							<label for="question5a">Fresh</label>
-						</li>
-						<li>
-							<input name="question5" id="question5b" type="radio" value="Fresh" data-a="t">
-							<label for="question5b">Fresh</label>
-						</li>
-						<li>
-							<input name="question5" id="question5c" type="radio" value="Fresh" data-a="t">
-							<label for="question5c">American Fresh</label>
-						</li>
-						<li>
-							<input name="question5" id="question5d" type="radio" value="Fresh" data-a="t">
-							<label for="question5d">Pepperoni</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-
-
-			<!-- quesiton 6 -->
-			<section class="question-wrapper">
-				<div class="question">
-					What?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question6" id="question6a" type="radio" value="Fresh" data-a="t">
-							<label for="question6a">Fresh</label>
-						</li>
-						<li>
-							<input name="question6" id="question6b" type="radio" value="Fresh" data-a="t">
-							<label for="question6b">Fresh</label>
-						</li>
-						<li>
-							<input name="question6" id="question6c" type="radio" value="Fresh" data-a="t">
-							<label for="question6c">American Fresh</label>
-						</li>
-						<li>
-							<input name="question6" id="question6d" type="radio" value="Fresh" data-a="t">
-							<label for="question6d">Pepperoni</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-
-
-			<!-- question 7 -->
-			<section class="question-wrapper">
-				<div class="question">
-					What?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<input name="question7" id="question7a" type="radio" value="Fresh" data-a="t">
-							<label for="question7a">Fresh</label>
-						</li>
-						<li>
-							<input name="question7" id="question7b" type="radio" value="Fresh" data-a="t">
-							<label for="question7b">Fresh</label>
-						</li>
-						<li>
-							<input name="question7" id="question7c" type="radio" value="Fresh" data-a="t">
-							<label for="question7c">American Fresh</label>
-						</li>
-						<li>
-							<input name="question7" id="question7d" type="radio" value="Fresh" data-a="t">
-							<label for="question7d">Pepperoni</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-
-
-
-
-			<!-- quesiton 4
-			<section class="question-wrapper">
-				<div class="question">
-					What?
-				</div>
-				<div class="answers">
-					<ul>
-						<li>
-							<label>
-								<input name="question4" type="radio" value="Fresh" data-a="t">
-								<span>Fresh</span>
-							</label>
-						</li>
-						<li>
-							<label>
-								<input name="question4" type="radio" value="Fresh" data-a="f">
-								<span>Fresh</span>
-							</label>
-						</li>
-						<li>
-							<label>
-								<input name="question4" type="radio" value="American" data-a="f">
-								<span>American</span>
-							</label>
-						</li>
-						<li>
-							<label>
-								<input name="question4" type="radio" value="Pepperoni" data-a="f">
-								<span>Pepperoni</span>
-							</label>
-						</li>
-					</ul>
-				</div>
-			</section>
-			-->
-
-			<div class="next-btn-wrapper">
-				<button class="next-btn">Next ></button>
 			</div>
-		</div>
-	</div><!-- end wrapper -->
+		</div><!-- end wrapper -->
+		
+		<section class="answer">
+			<div class="container">
+				<div class="response"></div>
+				<div class="correct-answer">is correct?</div>
+				<div class="countdown-circle-wrapper">
+					<div class="countdown-circle"></div>
+					<svg>
+						<circle r="18" cx="20" cy="20" id="circle"></circle>
+					</svg>
+				</div>
+			</div>
+		</section>
 
-<!-- 	<footer>
+	<div class="gameover">
+		<h3>Your Score</h3>
 		<div class="missed-wrapper">
 			<h4>Missed</h4>
-			<div id="missed"></div>
-		</div>
-
-		<div class="right-wrapper">
-			<h4>Right!</h4>
-			<div id="rightAnswers"></div>
-		</div>
-
+			<div class="score">
+				<div id="missed"></div>
+				<i class="icon-shocked"></i>
+			</div>
+		</div>		
 		<div class="wrong-wrapper">
 			<h4>Wrong!</h4>
-			<div id="wrongAnswers"></div>
+			<div class="score">
+				<div id="wrongAnswers"></div>
+				<i class="icon-confused"></i>
+			</div>
 		</div>
-	</footer> -->
+		<div class="right-wrapper">
+			<h4>Right!</h4>
+			<div class="score">
+				<div id="rightAnswers"></div>
+				<i class="icon-grin"></i>
+			</div>
+		</div>
+		<p class="try-again"><a href="index.html">Try again!</a></p>
+	</div>
+
+	<footer>
+		<p>Trivia Game Two by Peter Abeln</p>
+	</footer>
 
 
 

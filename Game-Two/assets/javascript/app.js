@@ -2,13 +2,21 @@
 
 $(document).ready(function($) {
 
+	let countDownId, answerCountDownId, countDownCircleId;
 	let currentQuestion = 0;
-	let countDownId;
-	const questions = $('.question-wrapper');
-	const totalQuestions = questions.length - 1; // account for zero indexing
 	let isTimerRunning = false;
 
-	$('.next-btn').on('click', next);
+	const countDownEl = $('#countdown span');
+	const questionsEl = $('.question-wrapper');
+	const totalQuestions = questionsEl.length - 1; // account for zero indexing
+
+	$('input[type="radio"]').on('change', function(){
+		var radioEl = $(this);
+		if (radioEl.val()) {
+			next(radioEl);
+			progessBar(true);
+		}
+	});
 	$('.start-over-btn').on('click', start);
 
 	function start(){
@@ -16,7 +24,7 @@ $(document).ready(function($) {
 			$('.start-wrapper').fadeOut(200, function() {
 				$('.wrapper').fadeIn(300, function() {
 					countDown();
-					questions.eq(0).fadeIn(200);
+					questionsEl.eq(0).fadeIn(200);
 				});
 			});
 		});
@@ -25,17 +33,19 @@ $(document).ready(function($) {
 
 
 	const countDown = function(){
-		let countDownTime = 11; // seconds
-		let countDownEl = $('#countdown span');
+		let countDownTime = 10; // seconds
 		if (!isTimerRunning) {
 			countDownId = setInterval(count, 1000);
 		}
 		function count(){
 			isTimerRunning = true;
 			countDownTime--;
+			// console.log('width: ' + width);
+			progessBar(false);
 			countDownEl.text(timeConverter(countDownTime));
 			if (countDownTime === 0) {
 				next();
+				progessBar(true);
 			}
 		}
 		function timeConverter(t) {
@@ -46,21 +56,49 @@ $(document).ready(function($) {
 		}
 	}
 
+	function progessBar(reset){
+		if (reset) {
+			$('header .progress span').css({width: '100%', transitionDuration: '0s'});
+		} else {
+			$('header .progress span').css({width: 0, transitionDuration: '9s'});
+		}
+	}
 
-	function next() {
+	function next(radioEl) {
 		clearInterval(countDownId);
 		scoreKeeper(currentQuestion);
 		isTimerRunning = false;
-		questions.eq(currentQuestion).fadeOut(300, function() {
+		questionsEl.eq(currentQuestion).fadeOut(300, function() {
 			if (currentQuestion === totalQuestions) { // end game
 				gameOver();
 			} else {
 				currentQuestion++;
-				questions.eq(currentQuestion).fadeIn(400, function(){
-					countDown();
-				});
+				//console.log(radioEl);
+				answer(currentQuestion, radioEl);
+				// questions.eq(currentQuestion).fadeIn(400, function(){
+				// 	countDown();
+				// });
 			}
 		});
+	}
+
+	function answer(curr, radioEl){
+		var answerEl = $('.answer');
+		countDownEl.text('0:00');
+		clearTimeout(answerCountDownId);
+		answerEl.fadeIn(300, function() {
+			progressCircle();
+			var answerMessage = 'MISSED?!';
+			if (radioEl != undefined && radioEl.length) {
+				answerMessage = radioEl.attr('data-a') == 't' ? 'RIGHT!' : 'WRONG!';
+			}
+			$('.response').text(answerMessage);
+			answerCountDownId = setTimeout(function() {
+				questionsEl.eq(curr).fadeIn(400, function(){
+					countDown();
+				});
+			}, 5000);
+		})
 	}
 
 
@@ -68,7 +106,7 @@ $(document).ready(function($) {
 	let wrongArr = [];
 	let missed = 0;
 	const scoreKeeper = function(currentQuestion){
-		const thisQuestion = questions.eq(currentQuestion);
+		const thisQuestion = questionsEl.eq(currentQuestion);
 		const q = thisQuestion.find('input[type="radio"]:checked');
 		if (q.length !== 0){
 			if (q.attr('data-a') === 't'){
@@ -84,15 +122,36 @@ $(document).ready(function($) {
 
 	const gameOver = function(){
 		clearInterval(countDownId);
-		$('.finish-wrapper').animate({
-			top: 0},
-		1000, function() {
-			$('#rightAnswers').text(rightArr.length);
-			$('#wrongAnswers').text(wrongArr.length);
-			$('#missed').text(missed);
-			console.log('game over');
-		});
+		console.log('game over');
+		$('#rightAnswers').text(rightArr.length);
+		$('#wrongAnswers').text(wrongArr.length);
+		$('#missed').text(missed);
+		$('.gameover').addClass('show');
+		$('body').addClass('fixed');
+		$('.overlay').addClass('on');
 	}
 
+	function progressCircle(){
+		clearInterval(countDownCircleId);
+		let countDownCircleEl = $('.countdown-circle');
+		let countDown = 5;
+
+		countDownCircleEl.text(countDown);
+		circle = document.getElementById('circle');
+		countDownCircleId = setInterval(function() {
+			//countDown = --countdown <= 0 ? 5 : countDown;
+			// <= 0 ? 5 : countDown;
+			// circle.style.animation = 'none'; 
+			countDown--;
+			countDownCircleEl.text(countDown);
+			if (countDown === 0) {
+				circle.style.animation = ''; 
+				clearInterval(countDownCircleId);
+			}
+			console.log(countDown);
+		}, 1000);
+		// circle.style.animation = 'none'; 
+
+	}
 
 });
